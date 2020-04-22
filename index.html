@@ -8,11 +8,41 @@
 
 <body id="gradient">
 	<h1>Gradient Background Generator</h1>
-	<input class="color1" type="color" name="color1" value="#ff0000">
-	<input class="color2" type="color" name="color2" value="#00ff00">
-	<h2>Current CSS Background</h2>
-	<h3></h3>
+	<p>Please input your parameters</p>
+	<form id="options" onsubmit="return false">
+		<p>Direction:</p>
+		<select id="direction">
+			<option value="" disabled>Select direction</option>
+			<option value="to top left">to top left</option>
+			<option value="to top">to top</option>
+			<option value="to top right">to top right</option>
+			<option value="to right" selected>to right</option>
+			<option value="to bottom right">to bottom right</option>
+			<option value="to bottom">to bottom</option>
+			<option value="to bottom left">to bottom left</option>
+			<option value="to left">to left</option>
+			<option value="angle">Angle</option>
+		</select>
+	</form>
+	<div id=color-container>
+	<p>colors (20max):</p>
+	<div id="colors">
+		<div id="color0">
+			<input class="color0" type="color" value="#ff0000">
+		</div>
+		<div id="color1">
+			<input class="color1" type="color" value="#00ff00">
+		</div>
+	</div>
+	<button id="addColor" onclick="addColor()">Add Color</button>
+	<button id="addColor" onclick="removeColor()">Remove Color</button>
+	</div>
+	<h2>Current CSS Background Code:</h2>
+	<h3>linear-gradient(to right, #ff0000, #00ff00)</h3>
 	<script type="text/javascript" src="script.js"></script>
 </body>
+<footer>
+	<p>PANAGIOTIS LIGOPSYCHAKIS &copy; 2019</p>
+</footer>
 
 </html>
